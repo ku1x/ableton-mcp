@@ -92,8 +92,19 @@ On Windows, use `.venv/Scripts/ableton-mcp-install-script.exe` for both commands
 The installer copies this checkout's bundled script into the detected User Library.
 A different existing script is backed up as `__init__.py.bak`.
 
-Restart Live. In **Settings/Preferences → Link, Tempo & MIDI**, select
-**AbletonMCP** as a Control Surface, with Input and Output set to **None**.
+#### Activate the script in Ableton Live
+
+Save your work, quit Ableton Live completely (**⌘Q** on macOS), and reopen it
+after installing the script. Live must restart to discover the new control surface.
+
+1. Open **Settings/Preferences → Link, Tempo & MIDI** (called **Tempo & MIDI** in Live 12.4).
+2. Select **AbletonMCP** under **Control Surface**; set **Input** and **Output** to **None**.
+3. Open a blank Set. Once your MCP client is configured below, tell the assistant
+   **“ready”** so it can check the connection and start creating music.
+
+If **AbletonMCP** is missing from the menu, verify the script is in
+`User Library/Remote Scripts/AbletonMCP/__init__.py`, then quit and reopen Live.
+Closing Settings or closing a Set does not restart Live.
 
 ### 3. Configure your MCP client
 

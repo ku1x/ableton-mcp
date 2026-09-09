@@ -102,8 +102,19 @@ Windows 使用 `.venv/Scripts/ableton-mcp-install-script.exe` 运行同样的参
 .venv/bin/ableton-mcp-install-script --target "/path/to/User Library/Remote Scripts"
 ```
 
-重启 Live，在 **Settings/Preferences → Link, Tempo & MIDI** 中将一个
-**Control Surface** 设置为 **AbletonMCP**，Input 与 Output 均设为 **None**。
+#### 在 Ableton Live 中启用脚本
+
+安装脚本后，先保存当前工作，完全退出 Ableton Live（macOS 按 **⌘Q**），然后重新打开。
+Live 需要重启才能识别新安装的控制脚本。
+
+1. 打开 **Settings/Preferences → Link, Tempo & MIDI**（Live 12.4 中名称为 **Tempo & MIDI**）。
+2. 在 **Control Surface** 中选择 **AbletonMCP**，将 **Input** 和 **Output** 均设为 **None**。
+3. 打开一个空白 Set。完成下方的 MCP 客户端配置后，向助手回复 **“ready”**，
+   让助手检查连接并开始创作音乐。
+
+如果菜单中没有 **AbletonMCP**，请确认脚本位于
+`User Library/Remote Scripts/AbletonMCP/__init__.py`，然后完全退出并重新打开 Live。
+仅关闭设置窗口或关闭 Set 不等于重启 Live。
 
 ### 3. 配置客户端
 
