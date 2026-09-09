@@ -62,9 +62,8 @@ class AbletonConnection:
                     self.sock = None
 
     def receive_full_response(self, sock, buffer_size=8192):
-        """Receive the complete response, potentially in multiple chunks"""
+        """Receive all chunks using the command-specific socket timeout."""
         chunks = []
-        sock.settimeout(15.0)  # Increased timeout for operations that might take longer
         
         try:
             while True:
